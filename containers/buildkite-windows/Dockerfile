@@ -29,6 +29,7 @@ RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
     --installPath C:\BuildTools `
     --add Microsoft.VisualStudio.Workload.VCTools `
     --add Microsoft.VisualStudio.Component.VC.ATL `
+    --add Microsoft.VisualStudio.Component.VC.CMake.Project `
     --includeRecommended `
     || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
@@ -91,7 +92,7 @@ RUN powershell -Command `
     [System.Environment]::SetEnvironmentVariable('PATH', `
     [System.Environment]::GetEnvironmentVariable('PATH', 'machine') + ';C:\Program Files\Git\usr\bin;C:\llvm-mingw\bin' `
     + ';C:\BuildTools\Common7\IDE\' `
-    + ';C:\BuildTools\Common7\IDE\CommonExt ensions\Microsoft\TeamFoundation\Team Explorer' `
+    + ';C:\BuildTools\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer' `
     + ';C:\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin' `
     + ';C:\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja' `
     + ';C:\BuildTools\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer' `
