@@ -20,7 +20,7 @@ param(
 $ROOT_DIR=(Get-Item $PSScriptRoot).Parent.FullName
 . ${ROOT_DIR}\scripts\common.ps1
 
-$QUALIFIED_NAME="us-central1-docker.pkg.dev/llvm-premerge-checks/${IMAGE_NAME}"
+$QUALIFIED_NAME="gcr.io/llvm-premerge-checks/${IMAGE_NAME}"
 
 Push-Location "$PSScriptRoot\$IMAGE_NAME"
 
