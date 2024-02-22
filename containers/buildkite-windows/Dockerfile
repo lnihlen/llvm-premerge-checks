@@ -36,7 +36,7 @@ RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
 # Register DIA dll (Debug Interface Access) so it can be used to symbolize
 # the stack traces. Register dll for 32 and 64 bit.
 # see https://developercommunity.visualstudio.com/content/problem/290674/msdia140dll-is-not-registered-on-vs2017-hosts.html
-RUN regsvr32 /S "C:\BuildTools\DIA SDK\bin\amd64\msdia140.dll" & `
+RUN regsvr32 /S "C:\BuildTools\DIA SDK\bin\amd64\msdia140.dll" && `
     regsvr32 /S "C:\BuildTools\DIA SDK\bin\msdia140.dll"
 
 # install chocolately as package manager
