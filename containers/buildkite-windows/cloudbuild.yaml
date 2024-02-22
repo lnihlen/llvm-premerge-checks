@@ -4,7 +4,7 @@
 #TODO get latest image in family
 #TODO check different machine types and timings
 steps:
-  - name: 'us-central1-docker.pkg.dev/${PROJECT_ID}/windows-builder'
+  - name: 'gcr.io/${PROJECT_ID}/windows-builder'
     args: ['--image','windows-cloud/global/images/windows-server-2019-dc-core-for-containers-v20230113',
           # '--network', 'vpc-network',
           # '--subnetwork', 'subnetwork',
