@@ -29,7 +29,6 @@ RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
     --installPath C:\BuildTools `
     --add Microsoft.VisualStudio.Workload.VCTools `
     --add Microsoft.VisualStudio.Component.VC.ATL `
-    --add Microsoft.VisualStudio.Component.VC.CMake.Project `
     --includeRecommended `
     || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
